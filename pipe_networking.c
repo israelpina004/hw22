@@ -11,7 +11,7 @@
 int server_setup() {
   int from_client = 0;
   mkfifo(WKP, 0644);
-  printf("Connecting ...");
+  printf("Connecting ...\n");
 
   from_client = open(WKP, O_RDONLY);
   if(from_client < 0) {
